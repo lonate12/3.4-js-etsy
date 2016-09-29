@@ -21,5 +21,10 @@
     filteredItems[0].title + ' ,' + filteredItems[1].title + ' , and ' +
     filteredItems[2].title);
 
-    
+  var thingsWithGBP = items.filter(function(thing){
+    var currencyCode = thing.currency_code;
+    return currencyCode == 'GBP';
+  });
+
+  console.log(thingsWithGBP[0].title + 'costs: ' + thingsWithGBP[0].price);
 }());
